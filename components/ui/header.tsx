@@ -26,22 +26,18 @@ export default function NavigationMenuDemo() {
 			<NavigationMenu>
 				<NavigationMenuList>
 					<NavigationMenuItem>
-						<Link href="/docs" legacyBehavior passHref>
-							<AboutDialog>
-								<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-									About
-								</NavigationMenuLink>
-							</AboutDialog>
+						<Link href="/about" legacyBehavior passHref>
+							<NavigationMenuLink className={navigationMenuTriggerStyle()}>
+								About
+							</NavigationMenuLink>
 						</Link>
 					</NavigationMenuItem>
 					<NavigationMenuItem>
-						<Link href="/docs" legacyBehavior passHref>
-							<DonateDialog>
-								<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-									Donate
-								</NavigationMenuLink>
-							</DonateDialog>
-						</Link>
+						<DonateDialog>
+							<NavigationMenuLink className={navigationMenuTriggerStyle()}>
+								Donate
+							</NavigationMenuLink>
+						</DonateDialog>
 					</NavigationMenuItem>
 					<NavigationMenuItem>
 						<Link

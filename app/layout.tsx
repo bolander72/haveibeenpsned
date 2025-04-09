@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "Have I Been Psned?",
-	description: "Check if your Bitcoin address has been poisoned",
+	title: "Have I Been Psned: Detect address poisoning attacks on your BTC",
+	description: "Detect address poisoning attacks on your BTC",
 };
 
 export default function RootLayout({
