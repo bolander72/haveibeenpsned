@@ -41,32 +41,37 @@ export default function TransactionCard({
 			</CardHeader>
 			<CardContent>
 				<div className="space-y-4">
-					<div className="w-fit flex items-center gap-2">
-						<Link
-							href={`https://mempool.space/address/${tx.potentialAttackerAddress}`}
-							target="_blank"
-							className="underline"
-						>
-							<Blockie
-								address={tx.potentialAttackerAddress}
-								size={9}
-								scale={5}
-							/>
-						</Link>
-						<div className="flex flex-col">
-							<span className="text-sm font-medium">
-								&#x25A0; {tx.blockHeight}
-							</span>
-							<p
-								dangerouslySetInnerHTML={{
-									__html: highlightMatchingChars(
-										tx.potentialAttackerAddress,
-										address || "",
-									),
-								}}
-								className="text-xs"
-							/>
+					<div className="flex flex-col gap-2">
+						<div className="w-fit flex items-center gap-2">
+							<Link
+								href={`https://mempool.space/address/${tx.potentialAttackerAddress}`}
+								target="_blank"
+								className="underline"
+							>
+								<Blockie
+									address={tx.potentialAttackerAddress}
+									size={9}
+									scale={5}
+								/>
+							</Link>
+							<div className="flex flex-col">
+								<span className="text-sm font-medium">
+									&#x25A0; {tx.blockHeight}
+								</span>
+								<span className="text-xs text-muted-foreground">
+									{tx.fee} sats fee
+								</span>
+							</div>
 						</div>
+						<p
+							dangerouslySetInnerHTML={{
+								__html: highlightMatchingChars(
+									tx.potentialAttackerAddress,
+									address || "",
+								),
+							}}
+							className="text-xs"
+						/>
 					</div>
 					<div className="flex flex-col gap-1">
 						{tx.type === "in" ? (

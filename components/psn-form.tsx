@@ -15,10 +15,10 @@ import {
 	FormLabel,
 	FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 import { usePsnCheck } from "@/hooks/use-psn-check";
 import TransactionCard from "@/components/transaction-card";
 import { useEffect, useState } from "react";
+import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
 	address: z
@@ -100,7 +100,7 @@ export function PsnForm() {
 							<FormItem>
 								<FormLabel>BTC Address</FormLabel>
 								<FormControl className="flex-1">
-									<Input
+									<Textarea
 										placeholder="bc1qr9xkxanfstzqpfd5ce0t3evwc45pnmsr2wua0h"
 										{...field}
 									/>
